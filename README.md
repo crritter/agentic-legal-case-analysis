@@ -2,9 +2,9 @@
 ***Christopher Ritter***
 
 ## Project Description
-This project presents a sophisticated agentic AI system designed for legal discovery applications. Leveraging Casetext's internal API, OpenAI's LLM ecosystem, LangChain for agent coordination, and LangGraph for workflow orchestration, this system creates a multi-agent architecture to identify the presence or absence of negative treatment of legal cases referenced within legal opinions.
+This project presents a sophisticated agentic AI system designed for legal research applications. Leveraging Casetext's internal API, OpenAI's LLM ecosystem, LangChain for agent coordination, and LangGraph for workflow orchestration, this system creates a multi-agent architecture to identify the presence or absence of negative treatment of legal cases referenced within legal opinions.
 
-The system employs specialized AI agents that collaborate to perform complex legal reasoning, making it suitable for production-scale legal discovery workflows. The primary function, `extract_negative_treatments_agentic`, takes a `SLUG` (Casetext's proprietary case identifier) as input and returns a comprehensive structured analysis of case treatments.
+The system employs specialized AI agents that collaborate to perform complex legal reasoning, making it suitable for production-scale legal research workflows. The primary function, `extract_negative_treatments_agentic`, takes a `SLUG` (Casetext's proprietary case identifier) as input and returns a comprehensive structured analysis of case treatments.
 
 ## Key Features
 
@@ -116,7 +116,7 @@ The system identifies multiple types of negative treatment:
 - **Batch Processing**: Can handle multiple documents with consistent quality
 - **Audit Trail**: Complete logging of agent decisions for legal defensibility
 - **Error Recovery**: Graceful handling of API failures, parsing errors, and edge cases
-- **Scalability**: Designed for high-volume Discovery applications
+- **Scalability**: Designed for high-volume research applications
 
 ## Model Selection and Configuration
 
@@ -183,15 +183,6 @@ workflow.confidence_threshold = 0.85  # Higher threshold for human review
 slugs = ['case-1', 'case-2', 'case-3']
 results = [extract_negative_treatments_agentic(slug) for slug in slugs]
 ```
-
-## System Advantages
-
-### 1. **Reliability**: Multi-strategy error handling and fallback mechanisms
-### 2. **Scalability**: Designed for high-volume legal discovery workflows  
-### 3. **Accuracy**: Specialized agents with domain-specific tools and reasoning
-### 4. **Auditability**: Complete decision trails for legal defensibility
-### 5. **Flexibility**: Configurable confidence thresholds and review criteria
-### 6. **Production-Ready**: Comprehensive error handling, logging, and quality control
 
 ## Current Limitations and Future Enhancements
 
